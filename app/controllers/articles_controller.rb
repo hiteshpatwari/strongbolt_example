@@ -8,7 +8,7 @@ class ArticlesController < ApplicationController
   end
 
   def index
-    @articles = Article.all
+    @articles = current_user.accessible_categories.map(&:articles).flatten.uniq
   end
 
   def edit
@@ -45,6 +45,6 @@ class ArticlesController < ApplicationController
   private
 
   def article_params
-    params.require(:article).permit(:title, :text)
+    params.require(:article).permit(:title, :text, :category_id)
   end
 end

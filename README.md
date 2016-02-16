@@ -1,11 +1,18 @@
 Strongbolt Example Application
 =========
 
+Usage
+---------------------
+1. Run `rake db:setup` to setup the database
+2. Run `rails s` to start the local webserver
+3. Explore the app at http://localhost:3000. You can use the users `admin@example.com` and `user@example.com` with the password `testpass`
+
 How this was created
 ---------------------
 1. Follow the [Rails Getting Started Guide](http://guides.rubyonrails.org/getting_started.html)
 2. [Setup Devise](https://github.com/plataformatec/devise#getting-started)
 3. Create a User in the Rails console: `User.create!(email: 'my-email@example.com', password: 'testpassword')`
+4. See [Setting up Strongbolt](#Setting up Strongbolt)
 
 Setting up Strongbolt
 ---------------------

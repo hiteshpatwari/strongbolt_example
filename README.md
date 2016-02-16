@@ -58,8 +58,10 @@ Add the following to your `config/routes.rb` to include routes for the integrate
     end
 
 You can run `rake routes` to see which routes Strongbolt provides for you. The important ones are:
+
 1. `/strongbolt/user_groups`
 2. `/strongbolt/roles`
+
 They help you manage User Groups and their roles and also allow you to add users to groups.
 
 To style the views a little bit, we're gonna add bootstrap by including the gem `twitter-bootstrap-rails` and running:

@@ -24,7 +24,7 @@ Strongbolt.setup do |config|
   # It can be useful for instance with devise controllers, to avoid subclassing them.
   # Write the controller names the same way you would with routes
   #
-  config.skip_controller_authorization_for "Welcome", "Devise::Sessions", "Devise::Registrations"
+  config.skip_controller_authorization_for "Devise::Sessions", "Devise::Registrations"
 
   #
   # List here the set of default permissions granted to every user

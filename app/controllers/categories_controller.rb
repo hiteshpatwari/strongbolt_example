@@ -39,7 +39,7 @@ class CategoriesController < ApplicationController
     @category = Category.find(params[:id])
     @category.destroy
 
-    redirect_to category_path
+    redirect_to categories_path
   end
 
   private

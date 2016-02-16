@@ -44,12 +44,16 @@ class UsersController < ApplicationController
     @user = User.find(params[:id])
     @user.destroy
 
-    redirect_to user_path
+    redirect_to users_path
   end
 
   private
 
   def user_params
-    params.require(:user).permit(:email, { category_ids: [] })
+    if current_user.can?(:create, User)
+      params.require(:user).permit(:email, :password, { category_ids: [] })
+    else
+      params.require(:user).permit(:email, { category_ids: [] })
+    end
   end
 end

@@ -19,6 +19,13 @@
     <%= f.text_field :email %>
   </p>
 
+  <% if current_user.can?(:create, User) %>
+    <p>
+      <%= f.label :password %><br>
+      <%= f.password_field :password %>
+    </p>
+  <% end %>
+
   <p>
     <%= f.label :categories %><br>
     <%= f.collection_select :category_ids, current_user.accessible_categories, :id, :name,

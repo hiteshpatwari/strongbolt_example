@@ -21,7 +21,7 @@
 
   <p>
     <%= f.label :category %><br>
-    <%= f.collection_select :category_id, Category.all, :id, :name %>
+    <%= f.collection_select :category_id, current_user.accessible_categories, :id, :name %>
   </p>
 
   <p>

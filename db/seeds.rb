@@ -37,7 +37,11 @@ Strongbolt::Capability.create!(model: 'Category', action: 'find', require_owners
   require_tenant_access: true, roles: [unprivileged_role])
 Strongbolt::Capability.create!(model: 'Article', action: 'find', require_ownership: false,
   require_tenant_access: true, roles: [unprivileged_role])
+Strongbolt::Capability.create!(model: 'Article', action: 'create', require_ownership: false,
+  require_tenant_access: true, roles: [unprivileged_role])
 Strongbolt::Capability.create!(model: 'Comment', action: 'find', require_ownership: false,
+  require_tenant_access: true, roles: [unprivileged_role])
+Strongbolt::Capability.create!(model: 'Comment', action: 'create', require_ownership: false,
   require_tenant_access: true, roles: [unprivileged_role])
 
 admin_user  = User.create!(email: 'admin@example.com', password: 'testpass')
